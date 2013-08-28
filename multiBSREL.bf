@@ -2,9 +2,11 @@ RequireVersion ("2.1320130313");
 
 // XXX make the BSREL3 file outputs different
 // XXX Check to make sure both BSREL and BSREL3 can be run
+// XXX make it so that BSREL3 doesn't have to start with everything back at
+// one
 
 PRINT_MG94 = 1;
-RUN_BSREL = 0;
+RUN_BSREL = 1;
 RUN_BSREL3 = 1;
 VERBOSITY_LEVEL				= 0;
 maximum_number_of_omegas   = 10;
@@ -579,6 +581,8 @@ if (RUN_BSREL == 1) {
 
 
 if (RUN_BSREL3 == 1) {
+
+    csvFilePath = csvFilePath + ".BSREL";
 
     pValueByBranch				  = {totalBranchCount,8};
 
