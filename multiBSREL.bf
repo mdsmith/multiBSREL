@@ -581,8 +581,8 @@ if (RUN_BSREL == 1) {
 
 
 if (RUN_BSREL3 == 1) {
-
     csvFilePath = csvFilePath + ".BSREL";
+    fprintf(csvFilePath, CLEAR_FILE, KEEP_OPEN, "Branch,Mean_dNdS,RateClasses,OmegaOver1,WtOmegaOver1,LRT,p,p_Holm,BranchLength");
 
     pValueByBranch				  = {totalBranchCount,8};
 
